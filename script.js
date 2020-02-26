@@ -37,7 +37,7 @@ function displayResults(responseJson) {
 function searchBrews(query) {
     console.log("searchBrews function working");
     const params = {
-        by_city: query
+        by_city: query,
     };
     const queryString = formatQueryParams(params)
     const url = searchURL + '?' + queryString;
