@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew 2 You</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <nav>
+        <h1>Brew 2 You</h1>
+    </nav>
+
+
+
+    <div class="container">
+        <h2>Find a Brewery</h2>
+        <h3 for="search-term">Search by City or State</h3>
+
+        <form id="js-form">
+            <input type="text" name="search-term" id="js-search-term" placeholder="Enter city or state" required>
+            <input type="submit" value="Search" id="search-button">
+        </form>
+        <p id="js-error-message"></p>
+    </div>
+    
+        <section id="results" class="hidden">
+            <h4>Brews Near You:</h4>
+            <ul id="results-list">
+            </ul>
+        </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
