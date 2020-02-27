@@ -16,14 +16,15 @@ function displayResults(responseJson) {
     for (let i = 0; i < responseJson.length; i++) {
         $('#results-list').append(
             `<li>
-                <h5>${responseJson[i].name}</h5>
-                <p>${responseJson[i].brewery_type}</p>
+                <h4>${responseJson[i].name} (${responseJson[i].brewery_type})</h4>
                 <address>
-                    ${responseJson[i].street} </br> </br> 
-                    ${responseJson[i].city}, ${responseJson[i].state} ${responseJson[i].postal_code}
-                    ${responseJson[i].phone}
-                </address>
+                    <a href="http://maps.google.com/maps?q=${responseJson[i].street}+${responseJson[i].city}+${responseJson[i].state}+${responseJson[i].postal_code}" target="_blank"> </br>
+                    ${responseJson[i].street} </br> 
+                    ${responseJson[i].city}, ${responseJson[i].state} ${responseJson[i].postal_code}</a> </br> </br>
+                    ${responseJson[i].phone}                     
+                </address> </br>
                 <a href="${responseJson[i].website_url}" target="_blank">${responseJson[i].website_url}</a>
+                
             </li>`
         );
     }
@@ -36,10 +37,9 @@ function displayResults(responseJson) {
 
 function searchBrews(query) {
     console.log("searchBrews function working");
+    let option = $("#search-by").val()
     const params = {
-        by_city: query,
-        by_state: query,
-        by_postal: query
+        [option]: query,
     };
     const queryString = formatQueryParams(params)
     const url = searchURL + '?' + queryString;

@@ -15,16 +15,13 @@
 
     <div class="container">
         <h2>Find a Brewery</h2>
-        
 
         <form id="js-form">
-            <input list="search-by" placeholder="Search By..">
-            <datalist id="search-by">
-    
-                <option value="City">
-                <option value="State">
-                <option value="Zip Code">        
-            </datalist>
+            <select id="search-by">
+                <option value="by_city">City</option>
+                <option value="by_state">State</option>
+                <option value="by_postal">Zip Code</option>     
+            </select    >
             <input type="text" name="search-term" id="js-search-term" required>
             <input type="submit" value="Search" id="search-button">
         </form>
@@ -32,7 +29,7 @@
     </div>
     
         <section id="results hidden">
-            <h4>Brews Near You:</h4>
+            <h3>Brews Near You:</h3>
             <ul id="results-list">
             </ul>
         </section>
