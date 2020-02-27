@@ -8,17 +8,24 @@
 </head>
 <body>
     <nav>
-        <h1>Brew 2 You</h1>
+        <h1>Brews 2 You</h1>
     </nav>
 
 
 
     <div class="container">
         <h2>Find a Brewery</h2>
-        <p for="search-term">Search by City</p>
+        
 
         <form id="js-form">
-            <input type="text" name="search-term" id="js-search-term" placeholder="Enter city here" required>
+            <input list="search-by" placeholder="Search By..">
+            <datalist id="search-by">
+    
+                <option value="City">
+                <option value="State">
+                <option value="Zip Code">        
+            </datalist>
+            <input type="text" name="search-term" id="js-search-term" required>
             <input type="submit" value="Search" id="search-button">
         </form>
         <p id="js-error-message"></p>
