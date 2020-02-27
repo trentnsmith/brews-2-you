@@ -38,6 +38,8 @@ function searchBrews(query) {
     console.log("searchBrews function working");
     const params = {
         by_city: query,
+        by_state: query,
+        by_postal: query
     };
     const queryString = formatQueryParams(params)
     const url = searchURL + '?' + queryString;
