@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: url(images/beer_taps2.jpg) no-repeat fixed;
+    background-size: cover;
+    background-color: transparent;
+
+}
+
+h2 {
+    color: rgb(44, 42, 42)
+}
+nav {
+    background: #111;
+    position: fixed;
+    color: white;
+    padding: 1% 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+header {
+    padding: 10% 0;
+    width: 100%;
+    text-align: center;
+    /*background-image: url("images/beer_taps2.jpg");
+    background-size: auto;*/
+  
+}
+
+section {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(224, 212, 212);
+    display: block;
+    border-radius: 5px;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
