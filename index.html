@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brew 2 You</title>
     <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Domine&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
@@ -13,7 +14,7 @@
 
 
 
-    <header class="container">
+    <header>
         <h2>Find a Brewery</h2>
 
         <form id="js-form">
@@ -28,11 +29,13 @@
         <p id="js-error-message"></p>
     </header>
     
-    <section id="results" class="hidden">
-        <h3>Brews Near You:</h3>
-        <ul id="results-list">
-        </ul>
-    </section>
+    <div class="container">
+        <section id="results" class="hidden">
+            <h3>Brews Near You:</h3>
+            <ul id="results-list">
+            </ul>
+        </section>
+    </div>  
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="script.js"></script>

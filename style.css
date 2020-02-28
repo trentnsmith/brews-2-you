@@ -6,11 +6,14 @@ body {
     background: url(images/beer_taps2.jpg) no-repeat fixed;
     background-size: cover;
     background-color: transparent;
+    font-family: 'Domine';
 
 }
 
 h2 {
     color: black;
+    
+
 }
 
 nav {
@@ -30,10 +33,17 @@ header {
     text-align: center;
     display: block;
     position: fixed;
+    z-index: 10;
+    background: transparent;
 }
 
 .hidden {
     display: none;
+}
+
+.container {
+    padding-top: 250px;
+   
 }
 
 section {
@@ -47,4 +57,9 @@ section {
     width: 50%;
     margin-left: 25%;
     margin-right: 25%;
+}
+
+li {
+    list-style: none;
+    text-align: left;
 }
