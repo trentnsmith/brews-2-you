@@ -10,10 +10,15 @@ body {
 
 }
 
-h2 {
-    color: black;
-    
+h1 {
+    font-family: 'Libre Baskerville';
+    font-size: 35px;
+    margin-left: 15px;
+}
 
+h2 {
+    color: rgb(253, 151, 18);
+    font-size: 25;
 }
 
 nav {
@@ -34,7 +39,29 @@ header {
     display: block;
     position: fixed;
     z-index: 10;
-    background: transparent;
+    
+}
+#search-button, #js-search-term, #search-by {
+    height: 28px;
+}
+
+#search-button {
+    background-color: rgb(128, 128, 128);
+}
+
+#search-button:hover {
+    cursor: pointer;
+    color: white;
+}
+
+#js-search-term, #search-by {
+    background-color: white;
+    opacity: .8;
+}
+
+#js-search-term {
+    letter-spacing: 1px;
+    text-align: center;
 }
 
 .hidden {
@@ -50,7 +77,7 @@ section {
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: rgb(211, 204, 204);
+    background-color: rgb(238, 238, 238);
     opacity: 0.8;
     display: block;
     border-radius: 5px;
@@ -62,4 +89,8 @@ section {
 li {
     list-style: none;
     text-align: left;
+}
+
+.js-link:hover {
+    text-decoration: none;
 }

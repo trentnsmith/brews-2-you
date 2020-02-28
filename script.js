@@ -17,12 +17,12 @@ function displayResults(responseJson) {
         $('#results-list').append(
             `<li>
                 <h4>${responseJson[i].name} (${responseJson[i].brewery_type})</h4>
-                    <a href="http://maps.google.com/maps?q=${responseJson[i].street}+${responseJson[i].city}+${responseJson[i].state}+${responseJson[i].postal_code}" target="_blank"> </br>
+                    <a class="js-link" href="http://maps.google.com/maps?q=${responseJson[i].street}+${responseJson[i].city}+${responseJson[i].state}+${responseJson[i].postal_code}" target="_blank"> </br>
                     ${responseJson[i].street} </br> 
                     ${responseJson[i].city}, ${responseJson[i].state} ${responseJson[i].postal_code}</a> </br> </br>
                     ${responseJson[i].phone}                     
                 </br> </br>
-                <a href="${responseJson[i].website_url}" target="_blank">${responseJson[i].website_url}</a>
+                <a href="${responseJson[i].website_url}" target="_blank" class="js-link">${responseJson[i].website_url}</a>
             </li>`
         );
     }
