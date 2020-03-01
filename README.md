@@ -1,5 +1,5 @@
 # brews-2-you
-An app that allows the user to search for breweries by city.
+An app that allows the user to search for breweries by city, state, or zip code. 
 
 Demo: https://trentnsmith.github.io/brews-2-you/
 
