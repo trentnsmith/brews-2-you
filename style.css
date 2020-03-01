@@ -12,13 +12,13 @@ body {
 
 h1 {
     font-family: 'Libre Baskerville';
-    font-size: 35px;
+    text-align: center;
     margin-left: 15px;
 }
 
 h2 {
-    color: rgb(253, 151, 18);
-    font-size: 25;
+    color: rgb(255, 115, 0);
+    font-size: 25px;
 }
 
 nav {
@@ -33,16 +33,17 @@ nav {
 }
 
 header {
-    padding: 10% 0;
+    margin-top: 100px;
     width: 100%;
     text-align: center;
     display: block;
-    position: fixed;
+    position: relative;
     z-index: 10;
-    
 }
+
 #search-button, #js-search-term, #search-by {
     height: 28px;
+    border-radius: 5px;
 }
 
 #search-button {
@@ -54,9 +55,10 @@ header {
     color: white;
 }
 
-#js-search-term, #search-by {
+#js-search-term {
     background-color: white;
     opacity: .8;
+    font-weight: bold;
 }
 
 #js-search-term {
@@ -64,13 +66,20 @@ header {
     text-align: center;
 }
 
+#search-by {
+    background-color: rgb(218, 213, 213);
+    opacity: .8;
+}
+
 .hidden {
     display: none;
 }
 
 .container {
-    padding-top: 250px;
    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 section {
@@ -81,9 +90,9 @@ section {
     opacity: 0.8;
     display: block;
     border-radius: 5px;
-    width: 50%;
-    margin-left: 25%;
-    margin-right: 25%;
+    max-height: 280px;
+    overflow: auto;
+    width: fit-content; 
 }
 
 li {
@@ -94,3 +103,41 @@ li {
 .js-link:hover {
     text-decoration: none;
 }
+
+@media screen and (min-width:480px) {
+    h1 {
+        font-family: 'Libre Baskerville';
+        font-size: 35px;
+        margin-left: 15px;
+        text-align: left;
+    }
+
+    h2 {
+        color: rgb(255, 115, 0);
+    }
+
+    section {
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: rgb(238, 238, 238);
+        opacity: 0.8;
+        display: block;
+        border-radius: 5px;
+        max-height: 300px;
+        overflow: auto;
+        width: fit-content; 
+    }
+
+    header {
+        margin-top: 150px;
+    }
+
+  }
+
+  @media screen and (min-width:800px) {
+    h2 {
+        font-size: 35px;
+    }
+
+   }

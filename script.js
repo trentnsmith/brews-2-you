@@ -11,12 +11,13 @@ function formatQueryParams(params) {
 
 function displayResults(responseJson) {
     console.log("displayResults function working");
+    //Clear previous results, if any
     $('#results-list').empty();
-
+    //Looping through response and formatting results
     for (let i = 0; i < responseJson.length; i++) {
         $('#results-list').append(
             `<li>
-                <h4>${responseJson[i].name} (${responseJson[i].brewery_type})</h4>
+                <h4>${responseJson[i].name}</h4>
                     <a class="js-link" href="http://maps.google.com/maps?q=${responseJson[i].street}+${responseJson[i].city}+${responseJson[i].state}+${responseJson[i].postal_code}" target="_blank"> </br>
                     ${responseJson[i].street} </br> 
                     ${responseJson[i].city}, ${responseJson[i].state} ${responseJson[i].postal_code}</a> </br> </br>
@@ -29,21 +30,25 @@ function displayResults(responseJson) {
     if (responseJson == 0) {
         $('#results-list').text(`No Results, Please Try Again`);
     };
+    //removing hidden class to show results 
     $('#results').removeClass('hidden');
 }
 
 
 function searchBrews(query) {
     console.log("searchBrews function working");
+    //Grabbing the value from the datalist for the params
     let option = $("#search-by").val()
+    //Setting up params
     const params = {
         [option]: query,
     };
+    //Creating the URL string
     const queryString = formatQueryParams(params)
     const url = searchURL + '?' + queryString;
 
     console.log(url);
-
+    //Fetch information, with an error message option
     fetch(url)
         .then(response => {
             if (response.ok) {
