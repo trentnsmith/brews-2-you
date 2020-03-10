@@ -17,8 +17,14 @@ h1 {
 }
 
 h2 {
-    color: rgb(255, 115, 0);
-    font-size: 25px;
+    background-color: rgb(236, 233, 233);
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    opacity: .8;
 }
 
 nav {
@@ -100,6 +106,10 @@ li {
     text-align: left;
 }
 
+.js-link-long {
+    display: none;
+}
+
 .js-link:hover {
     text-decoration: none;
 }
@@ -113,7 +123,7 @@ li {
     }
 
     h2 {
-        color: rgb(255, 115, 0);
+        font-size: 30px;
     }
 
     section {
@@ -133,11 +143,17 @@ li {
         margin-top: 150px;
     }
 
+    .js-link-short {
+        display: none;
+    }
+
+    .js-link-long {
+        display: contents;
+    }
+
   }
 
   @media screen and (min-width:800px) {
-    h2 {
-        font-size: 35px;
-    }
+    
 
    }

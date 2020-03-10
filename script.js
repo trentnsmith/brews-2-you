@@ -3,14 +3,13 @@
 const searchURL = 'https://api.openbrewerydb.org/breweries';
 
 function formatQueryParams(params) {
-    console.log("formatQueryParams function working");
     const queryItems = Object.keys(params)
-    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`);
+
+        .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`);
     return queryItems.join('&');
 }
 
 function displayResults(responseJson) {
-    console.log("displayResults function working");
     //Clear previous results, if any
     $('#results-list').empty();
     //Looping through response and formatting results
@@ -23,7 +22,8 @@ function displayResults(responseJson) {
                     ${responseJson[i].city}, ${responseJson[i].state} ${responseJson[i].postal_code}</a> </br> </br>
                     ${responseJson[i].phone}                     
                 </br> </br>
-                <a href="${responseJson[i].website_url}" target="_blank" class="js-link">${responseJson[i].website_url}</a>
+                <a href="${responseJson[i].website_url}" target="_blank" class="js-link-long">${responseJson[i].website_url}</a>
+                <a href="${responseJson[i].website_url}" target="_blank" class="js-link-short">Brewery Website</a>
             </li>`
         );
     }
@@ -36,18 +36,15 @@ function displayResults(responseJson) {
 
 
 function searchBrews(query) {
-    console.log("searchBrews function working");
     //Grabbing the value from the datalist for the params
-    let option = $("#search-by").val()
+    let option = $('#search-by').val()
     //Setting up params
     const params = {
         [option]: query,
     };
     //Creating the URL string
     const queryString = formatQueryParams(params)
-    const url = searchURL + '?' + queryString;
-
-    console.log(url);
+    const url = searchURL + '?' + queryString
     //Fetch information, with an error message option
     fetch(url)
         .then(response => {
@@ -63,7 +60,7 @@ function searchBrews(query) {
 }
 
 function watchForm() {
-    console.log("watchForm function working");
+    
     $('form').submit(event => {
         event.preventDefault();
         const searchTerm = $('#js-search-term').val();

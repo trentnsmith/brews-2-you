@@ -19,13 +19,13 @@
         <h2>Find a Brewery</h2>
 
         <form id="js-form">
-            <select id="search-by">
+            <select aria-label="search by options" id="search-by">
                 <option value="by_city">City</option>
                 <option value="by_state">State</option>
                 <option value="by_postal">Zip Code</option>     
-            </select    >
-            <input type="text" name="search-term" id="js-search-term" required>
-            <input type="submit" value="Search" id="search-button">
+            </select>
+            <input aria-label="input search term" type="text" name="search-term" id="js-search-term" required>
+            <input aria-label="submit" type="submit" value="Search" id="search-button">
         </form>
         <p id="js-error-message"></p>
     </header>
